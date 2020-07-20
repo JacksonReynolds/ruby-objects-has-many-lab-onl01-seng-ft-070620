@@ -2,11 +2,10 @@ require 'post.rb'
 
 class Author
 
-  attr_accessor :name, :posts
+  attr_accessor :name
 
   def initialize(name)
-    @name = name
-    @posts = []
+    self.name = name
   end #initialize
 
   def posts
@@ -15,7 +14,6 @@ class Author
 
   def add_post(post)
     post.author = self
-    @posts << post
   end #add_post
 
   def add_post_by_title(post_title)
