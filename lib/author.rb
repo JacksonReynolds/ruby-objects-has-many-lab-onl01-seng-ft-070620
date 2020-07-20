@@ -19,4 +19,8 @@ class Author
     add_post(post)
   end #add_post_by_name
 
+  def self.post_count
+    Post.all.count
+  end #self.post_count
+
 end #author
